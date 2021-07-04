@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;    
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+    --color-cyan: hsl(185, 75%, 39%);
+    --color-blue: hsl(229, 23%, 23%);
+    --color-grayish-blue: hsl(227, 10%, 46%);
+    --color-gray: hsl(0, 0%, 59%);
+    --color-white: hsl(0, 0%, 100%);
+} 
+
+html, body {
+    background-color: var(--color-cyan);
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.background-top, .background-bottom {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.background-top {
+    background: url("../images/bg-pattern-top.svg") no-repeat;
+    background-size: cover;
+    background-position: calc(100% - 170px) calc(100% - 250px);
+}
+
+.background-bottom {
+    background: url("../images/bg-pattern-bottom.svg") no-repeat;
+    background-size: cover;
+    background-position: calc(100% - -350px) calc(100% - -350px);
+}
+
+.profile-card {
+   display: flex;
+   flex-direction: column;
+   max-width: 350px;
+   height: 60vh;
+   background: url("../images/bg-pattern-card.svg"), var(--color-white);
+   background-repeat: no-repeat;
+   border-radius: 20px;  
+   box-shadow: 0 0 25px var(--color-gray);
+   position: relative;
+}
+
+.card-text, span {
+    color: var(--color-blue); 
+    font-weight: 700; 
+}
+
+.card-top {
+    position: relative;
+    top: 25%;
+}
+
+.card-top img {
+    border-radius: 360%;
+    border: 5px solid var(--color-white);
+}
+
+.card-top > span {
+    display: block;
+}
+
+.card-bottom {
+    display: flex;
+    position: relative;
+    top: 30%;
+    padding: 2% 10%;
+}
+
+.card-content {
+    opacity: 0.5;
+    line-height: 2;
+    color: var(--color-grayish-blue);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.attribution { 
+    font-size: 11px; 
+    margin-top: 20%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 1336px) {
+    .background-top {
+        background-position: calc(100% - 580px) calc(100% - 200px);
+    }
+    
+    .background-bottom {
+        background-position: calc(100% - -580px) calc(100% - -1000px);
+    }
+    
+}
